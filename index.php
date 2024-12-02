@@ -46,7 +46,7 @@
 			// }
 			// $do=($_GET['do']!='main')?$_GET['do']:'main';
 			// $do=(isset($_GET['do']))?$_GET['do']:'main';
-			$do=$GET['do']??'main'; //只有用isset且一組的情況下才可以用
+			$do=$_GET['do']??'main'; //只有用isset且一組的情況下才可以用
 			$file="./front/{$do}.php";
 			if(file_exists($file)){
 				include $file;
@@ -59,7 +59,7 @@
             <div class="di di ad" style="height:540px; width:23%; padding:0px; margin-left:22px; float:left; ">
                 <!--右邊-->
                 <button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;"
-                    onclick="lo(&#39;?do=admin&#39;)">回後台管理</button>
+                    onclick="lo(&#39;?do=admin&#39;)">管理登入</button>
                 <div style="width:89%; height:480px;" class="dbor">
                     <span class="t botli">校園映象區</span>
                     <script>

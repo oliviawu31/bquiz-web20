@@ -26,7 +26,7 @@
                     foreach($rows as $row){
                     ?>
                     <tr>
-                        <!-- [] =>表示多個檔案 -->
+                        <!-- [] =>表示多筆資料 -->
                         <td>
                             <input type="text" name="text[]" value="<?=$row['text'];?>" style="width:97%">
                         </td>
@@ -51,7 +51,7 @@
                     <tr>
                         <td width="200px">
                             <input type="button"
-                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php&#39;)"
+                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php?table=<?=$do;?>&#39;)"
                                 value="新增動態文字廣告">
                         </td>
                         <td class="cent">

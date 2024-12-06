@@ -1,7 +1,7 @@
 <!-- h3.cent =>置中 -->
 <h3 class="cent">新增標題區圖片</h3>
 <hr>
-<form action="api/insert_title.php" method="post" enctype="multipart/form-data">
+<form action="api/insert.php" method="post" enctype="multipart/form-data">
     <!-- table>tr*2>td*2 -->
     <table>
         <tr>
@@ -14,7 +14,8 @@
         </tr>
     </table>
     <div class="cent">
-        <input type="submit" value="新增">
+        <input type="hidden" name="table" value="<?=$_GET['table'];?>
+        <input type=" submit" value="新增">
         <input type="reset" value="重置">
     </div>
 </form>

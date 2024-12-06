@@ -1,6 +1,6 @@
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0055)?do=meg -->
+<!-- saved from url=(0040)http://127.0.0.1/test/exercise/collage/? -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -22,7 +22,7 @@
     </div>
     <iframe style="display:none;" name="back" id="back"></iframe>
     <div id="main">
-        <a title="" href="?">
+        <a title="" href="./home_files/home.htm">
             <div class="ti" style="background:url(&#39;use/&#39;); background-size:cover;"></div>
             <!--標題-->
         </a>
@@ -38,24 +38,20 @@
                 </div>
             </div>
             <?php
-			// $do=$_GET['do']??'main';
-			// ($_GET['do']!='main'){
-			// 	$do=$_GET['do'];
-			// }else{
-			// 	$do='main';
-			// }
-			// $do=($_GET['do']!='main')?$_GET['do']:'main';
-			// $do=(isset($_GET['do']))?$_GET['do']:'main';
-			$do=$_GET['do']??'main'; //只有用isset且一組的情況下才可以用
-			$file="./front/{$do}.php";
-			if(file_exists($file)){
-				include $file;
-			}else{
-				include "./front/main.php";
-			}
-			// include "./front/main.php";
+				//$do=$_GET['do']??'main';
 
-				?>
+				$do=$_GET['do']??'main';
+				$file="./front/{$do}.php";
+
+				if(file_exists($file)){
+					include $file;
+				}else{
+					include "./front/main.php";
+				}
+
+				//include (file_exists($file))?$file:"./front/main.php";
+
+			?>
             <div class="di di ad" style="height:540px; width:23%; padding:0px; margin-left:22px; float:left; ">
                 <!--右邊-->
                 <button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;"

@@ -1,5 +1,5 @@
 <!-- h3.cent =>置中 -->
-<h3 class="cent">新增標題區圖片</h3>
+<h3 class="cent">更新標題區圖片</h3>
 <hr>
 <form action="api/insert_title.php" method="post" enctype="multipart/form-data">
     <!-- table>tr*2>td*2 -->

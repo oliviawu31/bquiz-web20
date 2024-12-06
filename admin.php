@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html
+﻿﻿<?php include_once "api/db.php";?>
+<!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0068)?do=admin&redo=title -->
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -12,12 +13,14 @@
     <script src="./js/js.js"></script>
 </head>
 
-<body>
+<body>`
     <div id="cover" style="display:none; ">
         <div id="coverr">
             <a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;"
                 onclick="cl(&#39;#cover&#39;)">X</a>
-            <div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;"></div>
+            <div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;">
+
+            </div>
         </div>
     </div>
     <iframe style="display:none;" name="back" id="back"></iframe>
@@ -78,13 +81,14 @@
                 </div>
             </div>
             <?php
-							$do=$_GET['do']??'title'; //只有用isset且一組的情況下才可以用
-							$file="./backend/{$do}.php";
-							if(file_exists($file)){
-								include $file;
-							}else{
-								include "./backend/title.php";
-							}
+				$do=$_GET['do']??'title';
+				$file="./backend/{$do}.php";
+
+				if(file_exists($file)){
+					include $file;
+				}else{
+					include "./backend/title.php";
+				}
 				?>
 
         </div>

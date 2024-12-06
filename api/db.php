@@ -65,7 +65,7 @@ class DB{
             $sql="INSERT INTO $this->table (`".join("`,`",$cols)."`) VALUES('".join("','",$array)."')";
         }
         
-        // echo $sql;
+        //echo $sql;
         return $this->pdo->exec($sql);
     }
     
@@ -163,4 +163,4 @@ function to($url){
 $Title=new DB('titles');
 $Ad=new DB('ads');
 $Image=new DB('images');
-$Mvim=new DB('Mvim');
+$Mvim=new DB('mvims');

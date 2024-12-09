@@ -23,8 +23,9 @@
                         <td width="10%">顯示</td>
                         <td width="10%">刪除</td>
                     </tr>
+                    <!-- main_di=0 =>為主選單 -->
                     <?php
-                    $rows=$Menu->all();
+                    $rows=$Menu->all(['main_id'=>0]);
                     foreach($rows as $row){
                         // 不一定要做**
                         //保護管理者帳號

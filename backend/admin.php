@@ -31,7 +31,7 @@
                             <input type="text" name="acc[]" value="<?=$row['acc'];?>">
                         </td>
                         <td>
-                            <input type="text" name="pw[]" value="<?=$row['pw'];?>">
+                            <input type="password" name="pw[]" value="<?=$row['pw'];?>">
                         </td>
                         <td>
                             <input type="checkbox" name="del[]" value="<?=$row['id'];?>">

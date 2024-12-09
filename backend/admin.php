@@ -28,10 +28,10 @@
                     <tr>
                         <!-- [] =>表示多筆資料 -->
                         <td>
-                            <input type="text" name="acc[]" value="<?=$row['acc'];?>" style="width:97%">
+                            <input type="text" name="acc[]" value="<?=$row['acc'];?>">
                         </td>
                         <td>
-                            <input type="text" name="pw[]" value="<?=$row['pw'];?>" <?=($row['sh']==1)?'checked':'';?>>
+                            <input type="text" name="pw[]" value="<?=$row['pw'];?>">
                         </td>
                         <td>
                             <input type="checkbox" name="del[]" value="<?=$row['id'];?>">

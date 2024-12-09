@@ -12,30 +12,32 @@
         </tbody>
     </table>
     <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;">
-        <p class="t cent botli">最新消息資料內容管理</p>
-        <form method="post" action="./api/edit.php">
+        <p class="t cent botli">管理者帳號管理</p>
+        <form method="post" action="./api/edit_<?=$do;?>.php">
             <table width="100%">
                 <tbody>
                     <tr class="yel">
-                        <td width="80%">最新消息資料內容</td>
-                        <td width="10%">顯示</td>
+                        <td width="45%">帳號</td>
+                        <td width="45%">密碼</td>
                         <td width="10%">刪除</td>
                     </tr>
                     <?php
-                    $rows=$News->all();
+                    $rows=$Admin->all();
                     foreach($rows as $row){
                     ?>
                     <tr>
+                        <!-- [] =>表示多筆資料 -->
                         <td>
-                            <textarea name="text[]" style="width:95%;height:60px;"><?=$row['text'];?></textarea>
+                            <input type="text" name="acc[]" value="<?=$row['acc'];?>" style="width:97%">
                         </td>
                         <td>
-                            <input type="checkbox" name="sh[]" value="<?=$row['id'];?>"
-                                <?=($row['sh']==1)?'checked':'';?>>
+                            <input type="text" name="pw[]" value="<?=$row['pw'];?>" <?=($row['sh']==1)?'checked':'';?>>
                         </td>
                         <td>
                             <input type="checkbox" name="del[]" value="<?=$row['id'];?>">
                         </td>
+
+                        <!-- 因為須給對應刪除的欄位有一個id -->
                         <input type="hidden" name="id[]" value="<?=$row['id'];?>">
                     </tr>
                     <?php
@@ -49,10 +51,9 @@
                         <td width="200px">
                             <input type="button"
                                 onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php?table=<?=$do;?>&#39;)"
-                                value="新增最新消息資料">
+                                value="新增管理者帳號管理">
                         </td>
                         <td class="cent">
-                            <input type="hidden" name="table" value="<?=$do;?>">
                             <input type="submit" value="修改確定">
                             <input type="reset" value="重置">
                         </td>

@@ -1,16 +1,12 @@
 <!-- h3.cent =>置中 -->
-<h3 class="cent">更新標題區圖片</h3>
+<h3 class="cent">更新校園映像圖片</h3>
 <hr>
-<form action="api/update.php" method="post" enctype="multipart/form-data">
+<form action="api/insert_title.php" method="post" enctype="multipart/form-data">
     <!-- table>tr*2>td*2 -->
     <table>
         <tr>
-            <td>標題區圖片：</td>
+            <td>校園映像圖片：</td>
             <td><input type="file" name="img" id="img"></td>
-        </tr>
-        <tr>
-            <td>標題區替代文字</td>
-            <td><input type="text" name="text" id="text"></td>
         </tr>
     </table>
     <div class="cent">

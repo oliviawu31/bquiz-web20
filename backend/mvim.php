@@ -54,7 +54,7 @@
                     <tr>
                         <td width="200px">
                             <input type="button"
-                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php?table=<?=$do;?>&#39;)"
+                                onclick="op('#cover','#cvr','./modal/upload_<?=$do;?>.php?id=<?=$row['id'];?>&table=<?=$do;?>')"
                                 value="新增動畫圖片">
                         </td>
                         <td class="cent">

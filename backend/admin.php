@@ -24,6 +24,9 @@
                     <?php
                     $rows=$Admin->all();
                     foreach($rows as $row){
+                        // 不一定要做**
+                        //保護管理者帳號
+                        // if($row['acc']!='admin')
                     ?>
                     <tr>
                         <!-- [] =>表示多筆資料 -->

@@ -39,7 +39,7 @@
                         </td>
                         <td>
                             <input type="button"
-                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/upload_<?=$do;?>.php?id=<?=$row['id'];?>&#39;)"
+                                onclick="op('#cover','#cvr','./modal/upload_<?=$do;?>.php?id=<?=$row['id'];?>&table=<?=$do;?>')"
                                 value="更換動畫">
                         </td>
                         <input type="hidden" name="id[]" value="<?=$row['id'];?>">
@@ -54,7 +54,7 @@
                     <tr>
                         <td width="200px">
                             <input type="button"
-                                onclick="op('#cover','#cvr','./modal/upload_<?=$do;?>.php?id=<?=$row['id'];?>&table=<?=$do;?>')"
+                                onclick="op(&#39;#cover&#39;,&#39;#cvr&#39;,&#39;./modal/<?=$do;?>.php?table=<?=$do;?>&#39;)"
                                 value="新增動畫圖片">
                         </td>
                         <td class="cent">

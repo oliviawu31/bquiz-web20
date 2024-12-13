@@ -17,10 +17,11 @@ class DB{
      * 3. 其他SQL功能
      */
     function all(...$arg){
+ 
         $sql="SELECT * FROM $this->table ";
         if(!empty($arg[0])){
             if(is_array($arg[0])){
-
+                //dd($arg[0]);
                 $where=$this->a2s($arg[0]);
                 $sql=$sql . " WHERE ". join(" && ",$where);
             }else{

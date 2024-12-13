@@ -18,10 +18,10 @@
                 <tbody>
                     <tr class="yel">
                         <td width="50%">進站總人數:</td>
-                        <?php
-                        $row=$Total->find(1);
-                        ?>
-                        <td width="50%"><input type="number" name="total" value="<?=$row['total'];?>"></td>
+                        <!-- 可以縮成下面那一行 -->
+                        <!-- $row=$Total->find(1); -->
+
+                        <td width="50%"><input type="number" name="total" value="<?=$Total->find(1)['total'];?>"></td>
                     </tr>
                 </tbody>
             </table>

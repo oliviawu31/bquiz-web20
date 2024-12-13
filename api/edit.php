@@ -26,6 +26,7 @@ if(isset($_POST['id'])){
         case"menu":
             $row['text']=$_POST['text'][$idx];
             $row['href']=$_POST['href'][$idx];
+            // 多選用陣列表示
             $row['sh']=(isset($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
 
             break;

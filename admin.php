@@ -1,4 +1,4 @@
-﻿﻿<?php include_once "api/db.php";?>
+﻿﻿﻿<?php include_once "api/db.php";?>
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0068)?do=admin&redo=title -->
@@ -33,8 +33,6 @@
             <div id="lf" style="float:left;">
                 <div id="menuput" class="dbor">
                     <!--主選單放此-->
-                    <!-- 修改連結區 -->
-                    <!-- 可以按ctrl+D -->
                     <span class="t botli">後台管理選單</span>
                     <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=title">
                         <div class="mainmu">
@@ -52,11 +50,9 @@
                         <div class="mainmu">
                             校園映象資料管理 </div>
                     </a>
-                    <a style="color:#000; font-size:13px; text-decoration:none;" href="#"
-                        onclick="op('#cover','#cvr','./modal/view.php')">
-                        <div class=" mainmu">
-                            進站總人數管理
-                        </div>
+                    <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=total">
+                        <div class="mainmu">
+                            進站總人數管理 </div>
                     </a>
                     <a style="color:#000; font-size:13px; text-decoration:none;" href="?do=bottom">
                         <div class="mainmu">

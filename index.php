@@ -60,58 +60,58 @@
                 <div style="width:89%; height:480px;" class="dbor">
                     <span class="t botli">校園映象區</span>
 
-                    <div class='cent' id="up">
+                    <div class='cent' id="up" onclick="pp(1)">
                         <img src="./icon/up.jpg" alt="">
                     </div>
                     <div class='cent'>
                         <!-- 放圖片 -->
                         <?php
                             $imgs=$Image->all(['sh'=>1]);
-                            foreach($imgs as $img){
+                            foreach($imgs as $idx => $img){
+                                echo "<div class='im' id='ssaa{$idx}'>";
                                 // 載入圖片
-                                echo "<div>";
-                                echo "<img src='./upload/{$img['img']}' style='width: 150px;hight:103px;border:3px soild orange'>";
+                                echo "<img src='./upload/{$img['img']}' style='width:150px;height:103px;border:3px solid orange'>";
                                 echo "</div>";
                             }
                          ?>
 
                     </div>
                     <div class='cent' id="dn">
-                        <img src="./icon/dn.jpg" alt="">
+                        <div class='cent' id="dn" onclick="pp(2)">
+                            <img src="./icon/dn.jpg" alt="">
+                        </div>
+
+                        <script>
+                        var nowpage = 0,
+                            num = <?=$Image->count(['sh'=>1]);?>;
+
+                        function pp(x) {
+                            var s, t;
+                            if (x == 1 && nowpage - 1 >= 0) {
+                                nowpage--;
+                            }
+                            // 修改素材錯誤
+                            //  if (x == 2 && (nowpage + 1) * 3 <= num * 1 + 3)
+                            if (x == 2 && (nowpage + 1) <= num * 1 - 3) {
+                                nowpage++;
+                            }
+                            $(".im").hide()
+                            for (s = 0; s <= 2; s++) {
+                                t = s * 1 + nowpage * 1;
+                                $("#ssaa" + t).show()
+                            }
+                        }
+                        pp(1)
+                        </script>
                     </div>
-
-
-
-
-                    <script>
-                    var nowpage = 0,
-                        num = 0;
-
-                    function pp(x) {
-                        var s, t;
-                        if (x == 1 && nowpage - 1 >= 0) {
-                            nowpage--;
-                        }
-                        if (x == 2 && (nowpage + 1) * 3 <= num * 1 + 3) {
-                            nowpage++;
-                        }
-                        $(".im").hide()
-                        for (s = 0; s <= 2; s++) {
-                            t = s * 1 + nowpage * 1;
-                            $("#ssaa" + t).show()
-                        }
-                    }
-                    pp(1)
-                    </script>
                 </div>
             </div>
+            <div style="clear:both;"></div>
+            <div
+                style="width:1024px; left:0px; position:relative; background:#FC3; margin-top:4px; height:123px; display:block;">
+                <span class="t" style="line-height:123px;"><?=$Bottom->find(1)['bottom'];?></span>
+            </div>
         </div>
-        <div style="clear:both;"></div>
-        <div
-            style="width:1024px; left:0px; position:relative; background:#FC3; margin-top:4px; height:123px; display:block;">
-            <span class="t" style="line-height:123px;"><?=$Bottom->find(1)['bottom'];?></span>
-        </div>
-    </div>
 
 </body>
 

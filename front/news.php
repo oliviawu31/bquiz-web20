@@ -16,7 +16,7 @@
 				$rows=$News->all(" limit $start,$div");
 				echo "<ol start='".($start+1)."'>";
                 foreach($rows as $row){
-                    echo "<li>";
+                    echo "<li class='sswww'>";
                     echo mb_substr($row['text'],0,20);
                         echo "<span class='all' style='display:none'>";
                         echo $row['text'];
@@ -45,13 +45,16 @@
 
 
 </div>
-<div id="alt"
-    style="position: absolute; width: 350px; min-height: 100px; word-break:break-all; text-align:justify;  background-color: rgb(255, 255, 204); top: 50px; left: 400px; z-index: 99; display: none; padding: 5px; border: 3px double rgb(255, 153, 0); background-position: initial initial; background-repeat: initial initial;">
+<div id="alt" style="position: absolute; width: 350px; min-height: 100px; word-break:break-all;
+     text-align:justify;  background-color: rgb(255, 255, 204); top: 50px; left: 400px; z-index: 99;
+      display: none; padding: 5px; border: 3px double rgb(255, 153, 0); background-position: initial initial;
+       background-repeat: initial initial;">
 </div>
 <script>
+// <pre> =>分段
 $(".sswww").hover(
     function() {
-        $("#alt").html("" + $(this).children(".all").html() + "").css({
+        $("#alt").html("<pre>" + $(this).children(".all").html() + "</pre>").css({
             "top": $(this).offset().top - 50
         })
         $("#alt").show()

@@ -163,3 +163,12 @@ button:focus {
 	cursor: pointer;
 	text-decoration: none;
 }
+
+.mw {
+	position: absolute;
+	left: 100px;
+	z-index: 99;
+	width: 200px;
+	top: 23px;
+	display: none;
+}

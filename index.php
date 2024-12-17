@@ -59,6 +59,30 @@
                     onclick="lo(&#39;?do=admin&#39;)">管理登入</button>
                 <div style="width:89%; height:480px;" class="dbor">
                     <span class="t botli">校園映象區</span>
+
+                    <div class='cent' id="up">
+                        <img src="./icon/up.jpg" alt="">
+                    </div>
+                    <div class='cent'>
+                        <!-- 放圖片 -->
+                        <?php
+                            $imgs=$Image->all(['sh'=>1]);
+                            foreach($imgs as $img){
+                                // 載入圖片
+                                echo "<div>";
+                                echo "<img src='./upload/{$img['img']}' style='width: 150px;hight:103px;border:3px soild orange'>";
+                                echo "</div>";
+                            }
+                         ?>
+
+                    </div>
+                    <div class='cent' id="dn">
+                        <img src="./icon/dn.jpg" alt="">
+                    </div>
+
+
+
+
                     <script>
                     var nowpage = 0,
                         num = 0;

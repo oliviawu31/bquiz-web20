@@ -1,4 +1,12 @@
-﻿﻿<?php include_once "api/db.php";?>
+﻿﻿<?php include_once "api/db.php";
+session_start();
+// 如果沒有設定session的話就無法登入管理畫面
+if(!isset($_SESSION['login'])){
+    echo "請從登入頁登入<a href='index.php?do=login'>管理登入</a>";
+    exit();
+}
+
+?>
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0068)?do=admin&redo=title -->
@@ -23,7 +31,7 @@
             </div>
         </div>
     </div>
-    <iframe style="display:none;" name="back" id="back"></iframe>
+    <!-- 刪除iframe -->
     <div id="main">
         <a title="<?=$Title->find(['sh'=>1])['text'];?>" href="index.php">
             <div class="ti"

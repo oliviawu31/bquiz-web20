@@ -1,5 +1,7 @@
 ﻿﻿<?php include_once "api/db.php";
-session_start();
+// 刪除session_start();
+// session_start();
+
 // 如果沒有設定session的話就無法登入管理畫面
 if(!isset($_SESSION['login'])){
     echo "請從登入頁登入<a href='index.php?do=login'>管理登入</a>";

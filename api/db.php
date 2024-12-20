@@ -177,6 +177,8 @@ $Bottom=new DB('bottom');
 if(!isset($_SESSION['view'])){
     echo "hi 歡迎第一次來訪";
     $_SESSION['view']=1;
-}else{
-    echo "hi 歡迎再次來訪";
+    $total=$Total->find(1);
+    $total['total']++;
+    $Total->save($total);
+
 }
